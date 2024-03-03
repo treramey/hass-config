@@ -20,8 +20,8 @@ person:
   - name: Shelby
     id: shelby
     device_trackers:
-      - device_tracker.shelbys_iphone_unifi
-      - device_tracker.shelby_iphone_13 #ios
+      - device_tracker.shelby_iphone_unifi
+      - device_tracker.shelbys_iphone #ios
 
   - name: Adam
     id: adam
