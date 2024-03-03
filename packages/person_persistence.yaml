@@ -52,8 +52,8 @@ automation:
     trigger:
       platform: state
       entity_id:
-        - person.matte
-        - person.sanja
+        - person.trevor
+        - person.shelby
         - person.adam
       from:
         - home
