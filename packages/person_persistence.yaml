@@ -1,34 +1,47 @@
 homeassistant:
   customize:
-    person.matte:
-      entity_picture: /local/mattias.png
+    person.trevor:
+      entity_picture: /local/img/trevor.png
     device_tracker.iphone:
       entity_picture: /local/device_tracker.svg
-    person.sanja:
-      entity_picture: /local/sanja.png
+    person.shelby:
+      entity_picture: /local/img/shelby.png
+
+    person.adam:
+      entity_picture: /local/img/adam.png
 
 person:
-  - name: Matte
-    id: matte
+  - name: Trevor
+    id: trevor
     device_trackers:
-      - device_tracker.mattias_iphone_unifi
-      - device_tracker.iphone #ios
+      - device_tracker.trevor_iphone_unifi
+      - device_tracker.trevor_iphone #ios
 
-  - name: Sanja
-    id: sanja
+  - name: Shelby
+    id: shelby
     device_trackers:
-      - device_tracker.sanjas_iphone_unifi
-      - device_tracker.sanja_iphone_13 #ios
+      - device_tracker.shelbys_iphone_unifi
+      - device_tracker.shelby_iphone_13 #ios
+
+  - name: Adam
+    id: adam
+    device_trackers:
+      - device_tracker.adam_iphone_unifi
 
 mqtt:
   sensor:
-    - name: matte_last_changed
-      state_topic: homeassistant/persistence/matte
+    - name: trevor_last_changed
+      state_topic: homeassistant/persistence/trevor
       value_template: >
         {{ value | replace(' ', 'T') }}
 
-    - name: sanja_last_changed
-      state_topic: homeassistant/persistence/sanja
+    - name: shelby_last_changed
+      state_topic: homeassistant/persistence/shelby
+      value_template: >
+        {{ value | replace(' ', 'T') }}
+
+    - name: adam_last_changed
+      state_topic: homeassistant/persistence/adam
       value_template: >
         {{ value | replace(' ', 'T') }}
 
@@ -41,6 +54,7 @@ automation:
       entity_id:
         - person.matte
         - person.sanja
+        - person.adam
       from:
         - home
         - not_home

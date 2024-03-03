@@ -1,21 +1,23 @@
-# homeassistant:
-#   name: Hem
-#   latitude: !secret homeassistant_latitude
-#   longitude: !secret homeassistant_longitude
-#   elevation: !secret homeassistant_elevation
-#   unit_system: metric
-#   temperature_unit: C
-#   time_zone: Europe/Stockholm
-#   language: sv
-#   country: SE
-#   currency: SEK
-#   packages: !include_dir_named packages
-#   customize_domain:
-#     automation:
-#       initial_state: true
-#   allowlist_external_dirs:
-#     - /config
-#
+homeassistant:
+  name: Hem
+  latitude: !secret homeassistant_latitude
+  longitude: !secret homeassistant_longitude
+  elevation: !secret homeassistant_elevation
+  unit_system: imperial
+  temperature_unit: F
+  time_zone: America/Chicago
+  language: el
+  country: US
+  currency: USD
+  packages: !include_dir_named packages
+  customize_domain:
+    automation:
+      initial_state: true
+  allowlist_external_dirs:
+    - /config
+
+automation ui-automation: !include automations.yaml
+
 # default_config:
 #
 # frontend:
@@ -54,15 +56,15 @@
 #     entity_globs:
 #       - sensor.browser_*
 #
-# logger:
-#   default: warning
-#   logs:
-#     homeassistant.components.websocket_api: fatal
-#     custom_components.monitor_docker.helpers: error
-#     homeassistant.setup: error
-#
-# sensor:
-#   - platform: time_date
-#     display_options:
-#       - time
-#       - date
+logger:
+  default: warning
+  logs:
+    homeassistant.components.websocket_api: fatal
+    custom_components.monitor_docker.helpers: error
+    homeassistant.setup: error
+
+sensor:
+  - platform: time_date
+    display_options:
+      - time
+      - date
