@@ -1,9 +1,11 @@
 light:
-  # - platform: group
-  #   name: living_room_group
-  #   entities:
-  #     - light.living_room_tv
-  #     - light.living_room_floor
+  - platform: group
+    name: living_room_group
+    entities:
+      - light.lr_ikea_bulb_1_light
+      - light.lr_ikea_bulb_2_light
+      - light.lr_lifx_bulb_2
+      - light.lr_lifx_bulb_3
 
   - platform: group
     name: trevor_office_group
@@ -18,14 +20,12 @@ light:
       - light.mb_lifx_bulb_1
 
 
-  # - platform: group
-  #   name: all_group_exclude_hallway
-  #   entities:
-  #     - light.living_room
-  #     - light.trevor_office
-  #     - light.bedroom
-  #     - light.bathroom
-  #     - light.closet
+  - platform: group
+    name: all_lights
+    entities:
+      - light.living_room_group
+      - light.trevor_office_group
+      - light.master_bedroom_group
 
 # homeassistant:
 #   customize:
