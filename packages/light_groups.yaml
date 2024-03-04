@@ -6,6 +6,7 @@ light:
       - light.lr_ikea_bulb_2_light
       - light.lr_lifx_bulb_2
       - light.lr_lifx_bulb_3
+      - light.lr_hue_bulb_1
 
   - platform: group
     name: trevor_office_group
