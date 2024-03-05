@@ -17,6 +17,7 @@ homeassistant:
     - /config
 
 automation ui-automation: !include automations.yaml
+scene ui-scene: !include scenes.yaml
 
 default_config:
 #
